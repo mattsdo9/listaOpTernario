@@ -8,11 +8,12 @@
         //- acima de 1500: aumento de 5 %
     
     //Entrada
-
-
+    const preço = Number(prompt("Informe um preço:").trim().replace(",","."));
+    const aumento280 = (preço * 0.20)
+    const aumento700 = (preço * 0.15)
+    const aumento1500 = (preço * 0.10)
+    const aumentoAcima = (preço * 0.05)
     //Processamento
-
-    
-    //Saída
+    (preço == 280) ? alert(`${aumento280} ficará com aumento de`) : alert(`Não tera aumento`)
 
 </script>
