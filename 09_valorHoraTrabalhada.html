@@ -8,11 +8,13 @@
     // Apresente o salário final recebido pelo funcionário semanalmente e o preço de cada hora trabalhada.
 
     //Entrada
-
+    const hora = Number(prompt("informe a quantidade de horas trabalhadas semanalmente").trim());
+    const valor = Number(prompt("Informe quanto que recebe por hora trabalhada"));
 
     //Processamento
-
-    
+    (hora <= 45) ? alert(`Não Haverá`) :
+        (hora <= 60) ? alert(`Haverá adicional de 20%`) :
+            (hora > 60)
     //Saída
 
 </script>

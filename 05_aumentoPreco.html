@@ -2,18 +2,20 @@
 <script>
     //Problema: Aumento de Preço
     //Recebe o preço do produto e calcula o aumento do preço, baseado no seguinte critério:
-        //- até 280(inclusive): aumento de 20 %
-        //- até 700(inclusive): aumento de 15 %
-        //- até 1500(inclusive): aumento de 10 %
-        //- acima de 1500: aumento de 5 %.
-    
-    //Entrada.
-    const preço = Number(prompt("Informe um preço:").trim().replace(",","."));
-    const aumento280 = (preço * 0.20)
-    const aumento700 = (preço * 0.15)
-    const aumento1500 = (preço * 0.10)
-    const aumentoAcima = (preço * 0.05)
-    //Processamento
-    (preço == 280) ? alert(`${aumento280} ficará com aumento de`) : alert(`Não tera aumento`)
+    //- até 280(inclusive): aumento de 20 %
+    //- até 700(inclusive): aumento de 15 %
+    //- até 1500(inclusive): aumento de 10 %
+    //- acima de 1500: aumento de 5 %.
 
+    //Entrada.
+    const preço = Number(prompt("Informe um preço:").trim().replace(",", "."));
+    const aumento280 = (preço * 0.20 + preço);
+    const aumento700 = (preço * 0.15 + preço);
+    const aumento1500 = (preço * 0.10 + preço);
+    const aumentoAcima = (preço * 0.05 + preço);
+    //Processamento
+    (preço <= 280) ? alert(`ficará o valor de:  R$${aumento280.toFixed(2)}`) :
+        (preço <= 700) ? alert(`ficará o valor de:  R$${aumento700.toFixed(2)}`) :
+            (preço <= 700) ? alert(`ficará o valor de:  R$${aumento700.toFixed(2)}`) :
+                (preço <= 1500) ? alert(`ficará o valor de:  R$${aumento1500.toFixed(2)}`) : alert(`ficará o valor de:  R$${aumentoAcima}`);
 </script>

@@ -11,10 +11,15 @@
 
     //Entrada
 
+    const notinha = Number(prompt(`Informe uma nota:`).trim().replace(",", "."));
 
     //Processamento
+    (notinha <= 10 && notinha >= 9) ? alert("Sua nota é A") :
+        (notinha < 9 && notinha >= 8) ? alert("Sua nota é B") :
+            (notinha < 8 && notinha >= 7) ? alert("Sua nota é C") :
+                (notinha < 7 && notinha >= 6) ? alert("Sua nota é D") :
+                    (notinha > 6) ? alert(`"Sua nota é E"`) : alert("Valor Inválido")
 
-    
     //Saída
 
 </script>

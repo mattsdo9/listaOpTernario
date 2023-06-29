@@ -8,11 +8,14 @@
     // - cães grandes: fator 7.
 
     //Entrada
-
+    const porte = prompt((`Informe o porte do seu cachorro: (p-pequeno, m-medio, g-grande)`)).trim().toLocaleUpperCase();
+    const idade = Number(prompt(`Informe a idade (inteira) do seu cachorro:`).trim());
 
     //Processamento
+    (porte == "P") ? alert(`A idade do cachorro será igual a ${(idade * 5)}`) :
+        (porte == "M") ? alert(`A idade do cachorro será igual a ${(idade * 6)}`) :
+            (porte == "G") ? alert(`A idade do cachorro será igual a ${(idade * 7)}`) : alert(`Resposta Invalida, Responda com (P, M ou G).`);
 
-    
     //Saída
 
 </script>
