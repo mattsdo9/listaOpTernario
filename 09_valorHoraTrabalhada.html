@@ -8,13 +8,20 @@
     // Apresente o salário final recebido pelo funcionário semanalmente e o preço de cada hora trabalhada.
 
     //Entrada
-    const hora = Number(prompt("informe a quantidade de horas trabalhadas semanalmente").trim());
-    const valor = Number(prompt("Informe quanto que recebe por hora trabalhada"));
+    const semana = parseInt(prompt(`qual a quantidade de horas que trabalha semanalmente?`).trim().replace(".", "."));
+    const horas = parseInt(prompt(`quanto recebe por hora trabalhada?`).trim().replace(".", "."));
+    let total = semana * horas;
+    let total1 = total + (total * 20 / 100);
+    let total2 = total + (total * 30 / 100);
 
     //Processamento
-    (hora <= 45) ? alert(`Não Haverá`) :
-        (hora <= 60) ? alert(`Haverá adicional de 20%`) :
-            (hora > 60)
+    let mensagemFinal = (semana <= 45) ? alert("voce nao tem adicional")
+        : (semana <= 60) ? alert(`valor com adicional sera de ${total1}`)
+            : (semana >= 61) ? alert(`valor adicional sera de ${total2}`)
+                : alert("Valor Inválido");
+
+
     //Saída
+    document.write(mensagemFinal)
 
 </script>

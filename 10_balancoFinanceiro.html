@@ -10,11 +10,24 @@
     // Verifique se o usuário ganha mais do que recebe e apresente em tela, indicando quanto que sobrou após o pagamento das contas ou quanto que faltou para poder pagar todas as contas previstas.
 
     //Entrada
+    const agua = parseInt(prompt(`qual o valor das despesas com agua:?`).trim().replace(".", "."));
+    const energia = parseInt(prompt(`quanto gasta com energia:?`).trim().replace(".", "."));
+    const telefone = parseInt(prompt(`quanto gasta com telefone:?`).trim().replace(".", "."));
+    const supermercado = parseInt(prompt(`quanto gasta com supermercado:?`).trim().replace(".", "."));
+    const salario = parseInt(prompt(`qual o valor do seu salario?`).trim().replace(".", "."));
 
-
+    let total = agua + energia + telefone + supermercado;
+    let total1 = salario - total;
+    let total2 = total - salario;
     //Processamento
 
-    
+    let mensagemFinal = (total < salario) ? alert(`salario suficiente  e sobrou ${total1}`)
+        : (total > salario) ? alert(`salario insuficiente faltou ${total2}`)
+            : alert("Valor Inválido");
+
+
     //Saída
-    
+
+    document.write(mensagemFinal)
+
 </script>
